@@ -11,26 +11,23 @@ const rl = readline.createInterface({
 });
 
 
+
 const pigLatin = (word) => {
-  let finalWord = "" ;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let finalWord = "";
   let cleanWord = word.toLowerCase().trim()
-  let vowels = ['a', 'e', 'i', 'o', 'u'] ;
-   if (vowels.indexOf(cleanWord[0]) > -1) {
-     finalWord = cleanWord + "yay";
-     return finalWord;
-   } 
-  //  else {
-  //    let firstWord = word.match(/[aeiou]/g) || 0;
-  //    let vowel = word.indexOf(firstWord[0]);
-  //    finalWord = word.substring(vowel) + word.substring(0,vowel) + "ay";
-  //    return finalWord ;
-   
+  if (vowels.indexOf(cleanWord[0]) > -1) {
+      finalWord = cleanWord + "yay";
+      return finalWord;
+  } else {
+      let firstMatch = cleanWord.match(/[aeiou]/g) || 0;
+      let vowel = cleanWord.indexOf(firstMatch[0]);
+      finalWord = cleanWord.substring(vowel) + cleanWord.substring(0, vowel) + "ay";
+      return finalWord;
+  }
+}
 
-  // {
-  //  let finalWord = word.match(/[a,e,i,o,u]/g) 
- 
-
-console.log(pigLatin('anana')) 
+console.log(pigLatin('Blabama'))
 
    
 
@@ -45,7 +42,7 @@ console.log(pigLatin('anana'))
 
 //  concat 'ay' to the end
 
-  }
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
