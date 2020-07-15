@@ -12,14 +12,46 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word) => {
+  let finalWord = "" ;
+  let cleanWord = word.toLowerCase().trim()
+  let vowels = ['a', 'e', 'i', 'o', 'u'] ;
+   if (vowels.indexOf(cleanWord[0]) > -1) {
+     finalWord = cleanWord + "yay";
+     return finalWord;
+   } 
+  //  else {
+  //    let firstWord = word.match(/[aeiou]/g) || 0;
+  //    let vowel = word.indexOf(firstWord[0]);
+  //    finalWord = word.substring(vowel) + word.substring(0,vowel) + "ay";
+  //    return finalWord ;
+   
 
-  // Your code here
+  // {
+  //  let finalWord = word.match(/[a,e,i,o,u]/g) 
+ 
 
-}
+console.log(pigLatin('anana')) 
+
+   
+
+// if word begins with consonant
+// list the vowels: a, e, i, o, u **
+// run through string until we find the first vowel
+// identify index position, store and use
+// store sound before vowel in a variable (bucket)
+
+// splice out 'y' (first sound)
+// concat/push 'y' (first sound) to end
+
+//  concat 'ay' to the end
+
+  }
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
 // to close it ctrl + C
+
+
 const getPrompt = () => {
   rl.question('word ', (answer) => {
     console.log( pigLatin(answer) );
