@@ -20,14 +20,15 @@ const pigLatin = (word) => {
       finalWord = cleanWord + "yay";
       return finalWord;
   } else {
+    // we used a regex BOOM
       let firstMatch = cleanWord.match(/[aeiou]/g) || 0;
-      let vowel = cleanWord.indexOf(firstMatch[0]);
-      finalWord = cleanWord.substring(vowel) + cleanWord.substring(0, vowel) + "ay";
+      let vowelIndex = cleanWord.indexOf(firstMatch[0]);
+      finalWord = cleanWord.substring(vowelIndex) + cleanWord.substring(0, vowelIndex) + "ay";
       return finalWord;
   }
 }
 
-console.log(pigLatin('Blabama'))
+console.log(pigLatin('Alabama'))
 
    
 
