@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Pig Latin</title>
-  </head>
-  <body>
-    <h1>Let's do Pig Latin Stuff!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <input type="text" id="stringInput" value="" placeholder="Type a word!" oninput="storeString(this.value)"></input>
-    <button onclick="pigLatin()">get piggy!</button>
-    <!-- <div id="results"></div> -->
-    <hr/>
-    <script src="dom-main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Pig Latin</title>
+  <style>
+    body {
+      background-color: linen;
+      font-family: 'Playfair Display', serif;
+    }
+
+    p {
+      font-size: 50px;
+    }
+  </style>
+</head>
+
+<body style="text-align: center; background-color: #88A078;">
+  <div class="card" style="width: 30rem; border-radius: 5px;">
+    <img
+      src="https://images.unsplash.com/photo-1580682777666-24a7b3024e24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+      class="card-img-top" alt="...">
+    <div class="card-body">
+      <h1>Pig Latinator</h1>
+      <h5 class="card-text">Pig Latin is not actually a language but a language game used to speak “in code.” Pig Latin
+        words are formed by altering
+        words in English.</h5>
+      <hr />
+      <div id="display-element"></div>
+      <input class="input-group-text" id="inputGroup-sizing-default" style="width: 450px;" id="stringInput" value=""
+        placeholder="Type in a word!" oninput="storeString(this.value)"></input>
+      <br>
+      <button type="button" style="width: 200px;" class="btn btn-outline-info" onclick="pigLatin()">Translate</button>
+    </div>
+  </div>
+  <script src="dom-main.js"></script>
+
+</body>
+
 </html>
